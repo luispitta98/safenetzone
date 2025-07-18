@@ -1,4 +1,5 @@
 ⚙️ Funcionalidades Principais
+
 Autenticação
 Login, verificação de sessão e logout via UsuarioController.
 
@@ -21,10 +22,13 @@ Captura de logs do Squid no banco.
 Relatórios: sites mais acessados, por IP, por hora, bloqueados e termo sensível.
 
 Ferramentas CLI
+
 scripts/processar_logs.php: lê access.log, extrai MACs, insere no banco e limpa o log.
+
 scripts/atualizar_ipset.php: atualiza ipsets com IPs permitidos dinamicamente.
 
 🛠️ Requisitos
+
 PHP ≥ 7.4 com PDO e extensões necessárias
 
 MySQL
@@ -34,6 +38,7 @@ Squid, Dnsmasq, iptables, hostapd
 RaspBarry Pi Model 8 - 32gb de disco.
 
 🧩 Como usar
+
 Faça login usando o usuário padrão: admin/admin.
 
 Configure SSID/senha em Configuração da Rede (gera QR code).
@@ -45,8 +50,10 @@ Confira logs detalhados em Relatórios.
 Gerencie usuários em Usuários (se disponível).
 
 🔧 Scripts CLI
+
 processar_logs.php: popula o banco com registros do Squid. Executado idealmente, regularmente, via CRON.
 atualizar_ipset.php: adiciona IPs detectados à lista "liberados" (útil para recuperação automática de bloqueios).
 
 📄 Licença
+
 Este projeto é open-source. Sinta-se livre para usá-lo, modificá-lo e contribuir!
