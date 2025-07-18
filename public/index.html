@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeNetZone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="extras/toastr.min.css" rel="stylesheet">
+</head>
+<body>
+    <header id="menuNavegacao" class="admin-menu" style="display: none;">
+        <div class="menu-container">
+            <button class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">☰</button>
+        </div>
+        <nav class="menu-links">
+            <button onclick="navegar('configuracoes')">Configuração da Rede</button>
+            <button onclick="navegar('bloqueios')">Controle de Acessos</button>
+            <button onclick="navegar('relatorios')">Relatórios</button>
+            <button onclick="logout()" class="logout">Sair</button>
+        </nav>
+    </header>
+
+    <div id="conteudo"></div>
+
+    <div id="conteudoLista"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <script src="app.js"></script>
+    <script src="components/login.js"></script>
+    <script src="components/usuario.js"></script>
+    <script src="components/configuracaoRede.js"></script>
+    <script src="components/controleAcesso.js"></script>
+    <script src="components/relatorio.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="extras/toastr.min.js"></script>
+</body>
+</html>
+
+<!-- <button onclick="navegar('usuarios')">Usuários</button> -->
